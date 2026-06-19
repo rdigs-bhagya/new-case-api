@@ -12,6 +12,9 @@ provider:
     MONGODB_PASSWORD: ${env:MONGODB_PASSWORD, ''}
     MONGODB_CLUSTER: ${env:MONGODB_CLUSTER, ''}
     MONGODB_DB: ${env:MONGODB_DB, ''}
+    ADMIN_EMAIL: ${env:ADMIN_EMAIL, ''}
+    ADMIN_PASSWORD: ${env:ADMIN_PASSWORD, ''}
+    JWT_SECRET: ${env:JWT_SECRET, ''}
 
 package:
   patterns:

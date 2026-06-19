@@ -1,6 +1,7 @@
 const express = require('express');
 const Claim = require('../models/Claim');
 const router = express.Router();
+const auth = require('../middleware/auth');
 const UAParser = require('ua-parser-js');
 const geoip = require('geoip-lite');
 
@@ -51,7 +52,7 @@ router.post('/', async (req, res) => {
 });
 
 // ✅ GET All Claims
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
   try {
     const claims = await Claim.find();
     res.status(200).json(claims);
@@ -61,7 +62,7 @@ router.get('/', async (req, res) => {
 });
 
 // ✅ GET a single Claim by ID
-router.get('/:id', async (req, res) => {
+router.get('/:id', auth, async (req, res) => {
   try {
     const claim = await Claim.findById(req.params.id);
     if (!claim) return res.status(404).json({ message: 'Claim not found' });
@@ -72,7 +73,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // ✅ DELETE a Claim by ID
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
   try {
     const deletedClaim = await Claim.findByIdAndDelete(req.params.id);
     if (!deletedClaim)

@@ -8,6 +8,7 @@ require("./api/connection");
 // Routes
 const contactRoutes = require("./api/routes/ContactRoutes");
 const claimRoutes = require("./api/routes/Claim");
+const authRoutes = require("./api/routes/Auth");
 
 // ------------------------------
 // MIDDLEWARES
@@ -81,6 +82,7 @@ app.get("/", (req, res) => {
 // ------------------------------
 app.use("/contact", contactRoutes);
 app.use("/claims", claimRoutes);
+app.use("/auth", authRoutes);
 
 // ------------------------------
 // ERROR HANDLER

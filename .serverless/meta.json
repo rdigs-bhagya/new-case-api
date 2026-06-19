@@ -17,8 +17,9 @@
           "MONGODB_PASSWORD": "<REDACTED>",
           "MONGODB_CLUSTER": "cluster0.cplngwo.mongodb.net",
           "MONGODB_DB": "test",
-          "BHAGYAS_PASS": "",
-          "BHAGYA_PASS": ""
+          "ADMIN_EMAIL": "leads@landmarkdemand.com",
+          "ADMIN_PASSWORD": "<REDACTED>",
+          "JWT_SECRET": "<REDACTED>"
         },
         "stage": "dev",
         "versionFunctions": true,
@@ -115,7 +116,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
-                  "S3Key": "serverless/b2b-api/dev/1781867901157-2026-06-19T11:18:21.157Z/b2b-api.zip"
+                  "S3Key": "serverless/b2b-api/dev/1781873148546-2026-06-19T12:45:48.546Z/b2b-api.zip"
                 },
                 "Handler": "server.handler",
                 "Runtime": "nodejs18.x",
@@ -128,8 +129,9 @@
                     "MONGODB_PASSWORD": "<REDACTED>",
                     "MONGODB_CLUSTER": "cluster0.cplngwo.mongodb.net",
                     "MONGODB_DB": "test",
-                    "BHAGYAS_PASS": "",
-                    "BHAGYA_PASS": ""
+                    "ADMIN_EMAIL": "leads@landmarkdemand.com",
+                    "ADMIN_PASSWORD": "<REDACTED>",
+                    "JWT_SECRET": "<REDACTED>"
                   }
                 },
                 "Role": {
@@ -143,14 +145,14 @@
                 "ApiLogGroup"
               ]
             },
-            "ApiLambdaVersionbs3aiNfayRiOjQKMbzh4SyGcQ95eMkkJOe9T273EDRU": {
+            "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "ApiLambdaFunction"
                 },
-                "CodeSha256": "DLMIjhiLClLpWp6OcOi6XdQ2xYHIuqrQNrBe93oHY3E="
+                "CodeSha256": "kcvO1rEEL1vQstGbd5c/ZLajZmmFvnXZRpvGoQ4HDVg="
               }
             },
             "ApiGatewayRestApi": {
@@ -368,7 +370,7 @@
                 "ApiLambdaPermissionApiGateway"
               ]
             },
-            "ApiGatewayDeployment1781867876455": {
+            "ApiGatewayDeployment1781873127278": {
               "Type": "AWS::ApiGateway::Deployment",
               "Properties": {
                 "RestApiId": {
@@ -431,7 +433,7 @@
             "ApiLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "ApiLambdaVersionbs3aiNfayRiOjQKMbzh4SyGcQ95eMkkJOe9T273EDRU"
+                "Ref": "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ"
               },
               "Export": {
                 "Name": "sls-b2b-api-dev-ApiLambdaFunctionQualifiedArn"
@@ -478,7 +480,7 @@
         "artifactsS3KeyDirname": "serverless/b2b-api/dev/code-artifacts",
         "deploymentBucket": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
         "artifact": "C:\\Users\\Admin\\Desktop\\new case api\\.serverless\\b2b-api.zip",
-        "artifactDirectoryName": "serverless/b2b-api/dev/1781867901157-2026-06-19T11:18:21.157Z"
+        "artifactDirectoryName": "serverless/b2b-api/dev/1781873148546-2026-06-19T12:45:48.546Z"
       },
       "functions": {
         "api": {
@@ -539,7 +541,7 @@
           "timeout": 10,
           "runtime": "nodejs18.x",
           "vpc": {},
-          "versionLogicalId": "ApiLambdaVersionbs3aiNfayRiOjQKMbzh4SyGcQ95eMkkJOe9T273EDRU"
+          "versionLogicalId": "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ"
         }
       },
       "plugins": [
@@ -563,8 +565,9 @@
         "MONGODB_PASSWORD": "<REDACTED>",
         "MONGODB_CLUSTER": "cluster0.cplngwo.mongodb.net",
         "MONGODB_DB": "test",
-        "BHAGYAS_PASS": "",
-        "BHAGYA_PASS": ""
+        "ADMIN_EMAIL": "leads@landmarkdemand.com",
+        "ADMIN_PASSWORD": "<REDACTED>",
+        "JWT_SECRET": "<REDACTED>"
       },
       "stage": "dev",
       "versionFunctions": true,
@@ -661,7 +664,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
-                "S3Key": "serverless/b2b-api/dev/1781867901157-2026-06-19T11:18:21.157Z/b2b-api.zip"
+                "S3Key": "serverless/b2b-api/dev/1781873148546-2026-06-19T12:45:48.546Z/b2b-api.zip"
               },
               "Handler": "server.handler",
               "Runtime": "nodejs18.x",
@@ -674,8 +677,9 @@
                   "MONGODB_PASSWORD": "<REDACTED>",
                   "MONGODB_CLUSTER": "cluster0.cplngwo.mongodb.net",
                   "MONGODB_DB": "test",
-                  "BHAGYAS_PASS": "",
-                  "BHAGYA_PASS": ""
+                  "ADMIN_EMAIL": "leads@landmarkdemand.com",
+                  "ADMIN_PASSWORD": "<REDACTED>",
+                  "JWT_SECRET": "<REDACTED>"
                 }
               },
               "Role": {
@@ -689,14 +693,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionbs3aiNfayRiOjQKMbzh4SyGcQ95eMkkJOe9T273EDRU": {
+          "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "DLMIjhiLClLpWp6OcOi6XdQ2xYHIuqrQNrBe93oHY3E="
+              "CodeSha256": "kcvO1rEEL1vQstGbd5c/ZLajZmmFvnXZRpvGoQ4HDVg="
             }
           },
           "ApiGatewayRestApi": {
@@ -914,7 +918,7 @@
               "ApiLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1781867876455": {
+          "ApiGatewayDeployment1781873127278": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -977,7 +981,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionbs3aiNfayRiOjQKMbzh4SyGcQ95eMkkJOe9T273EDRU"
+              "Ref": "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ"
             },
             "Export": {
               "Name": "sls-b2b-api-dev-ApiLambdaFunctionQualifiedArn"
@@ -1022,7 +1026,7 @@
       "serviceProvider": null,
       "instanceParameters": null
     },
-    "serviceRawFile": "service: b2b-api\nuseDotenv: true\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n  region: us-east-1 # Change to your preferred region\n  memorySize: 512\n  timeout: 10\n  environment:\n    MONGODB_USERNAME: ${env:MONGODB_USERNAME, ''}\n    MONGODB_PASSWORD: ${env:MONGODB_PASSWORD, ''}\n    MONGODB_CLUSTER: ${env:MONGODB_CLUSTER, ''}\n    MONGODB_DB: ${env:MONGODB_DB, ''}\n    BHAGYAS_PASS: ${env:BHAGYAS_PASS, ''}\n    BHAGYA_PASS: ${env:BHAGYA_PASS, ''}\n\npackage:\n  patterns:\n    - '!node_modules/aws-sdk/**'\n    - '!node_modules/serverless/**'\n    - '!node_modules/serverless-offline/**'\n    - '!undefined/**'\n    - '!.serverless/**'\n\nfunctions:\n  api:\n    handler: server.handler\n    events:\n      - http:\n          path: /\n          method: ANY\n          cors: true\n      - http:\n          path: /{proxy+}\n          method: ANY\n          cors: true\n\nplugins:\n  - serverless-offline\n\ncustom:\n  serverless-offline:\n    httpPort: 5000\n    noPrependStageInUrl: true\n",
+    "serviceRawFile": "service: b2b-api\nuseDotenv: true\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n  region: us-east-1 # Change to your preferred region\n  memorySize: 512\n  timeout: 10\n  environment:\n    MONGODB_USERNAME: ${env:MONGODB_USERNAME, ''}\n    MONGODB_PASSWORD: ${env:MONGODB_PASSWORD, ''}\n    MONGODB_CLUSTER: ${env:MONGODB_CLUSTER, ''}\n    MONGODB_DB: ${env:MONGODB_DB, ''}\n    ADMIN_EMAIL: ${env:ADMIN_EMAIL, ''}\n    ADMIN_PASSWORD: ${env:ADMIN_PASSWORD, ''}\n    JWT_SECRET: ${env:JWT_SECRET, ''}\n\npackage:\n  patterns:\n    - '!node_modules/aws-sdk/**'\n    - '!node_modules/serverless/**'\n    - '!node_modules/serverless-offline/**'\n    - '!undefined/**'\n    - '!.serverless/**'\n\nfunctions:\n  api:\n    handler: server.handler\n    events:\n      - http:\n          path: /\n          method: ANY\n          cors: true\n      - http:\n          path: /{proxy+}\n          method: ANY\n          cors: true\n\nplugins:\n  - serverless-offline\n\ncustom:\n  serverless-offline:\n    httpPort: 5000\n    noPrependStageInUrl: true\n",
     "command": [
       "deploy"
     ],
@@ -1149,7 +1153,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
-              "S3Key": "serverless/b2b-api/dev/1781867901157-2026-06-19T11:18:21.157Z/b2b-api.zip"
+              "S3Key": "serverless/b2b-api/dev/1781873148546-2026-06-19T12:45:48.546Z/b2b-api.zip"
             },
             "Handler": "server.handler",
             "Runtime": "nodejs18.x",
@@ -1162,8 +1166,9 @@
                 "MONGODB_PASSWORD": "<REDACTED>",
                 "MONGODB_CLUSTER": "cluster0.cplngwo.mongodb.net",
                 "MONGODB_DB": "test",
-                "BHAGYAS_PASS": "",
-                "BHAGYA_PASS": ""
+                "ADMIN_EMAIL": "leads@landmarkdemand.com",
+                "ADMIN_PASSWORD": "<REDACTED>",
+                "JWT_SECRET": "<REDACTED>"
               }
             },
             "Role": {
@@ -1177,14 +1182,14 @@
             "ApiLogGroup"
           ]
         },
-        "ApiLambdaVersionbs3aiNfayRiOjQKMbzh4SyGcQ95eMkkJOe9T273EDRU": {
+        "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "ApiLambdaFunction"
             },
-            "CodeSha256": "DLMIjhiLClLpWp6OcOi6XdQ2xYHIuqrQNrBe93oHY3E="
+            "CodeSha256": "kcvO1rEEL1vQstGbd5c/ZLajZmmFvnXZRpvGoQ4HDVg="
           }
         },
         "ApiGatewayRestApi": {
@@ -1402,7 +1407,7 @@
             "ApiLambdaPermissionApiGateway"
           ]
         },
-        "ApiGatewayDeployment1781867876455": {
+        "ApiGatewayDeployment1781873127278": {
           "Type": "AWS::ApiGateway::Deployment",
           "Properties": {
             "RestApiId": {
@@ -1465,7 +1470,7 @@
         "ApiLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "ApiLambdaVersionbs3aiNfayRiOjQKMbzh4SyGcQ95eMkkJOe9T273EDRU"
+            "Ref": "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ"
           },
           "Export": {
             "Name": "sls-b2b-api-dev-ApiLambdaFunctionQualifiedArn"
