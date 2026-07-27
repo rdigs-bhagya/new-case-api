@@ -55,6 +55,16 @@ router.get('/', auth, async (req, res) => {
   }
 });
 
+// ✅ Get contacts without email and phone
+router.get('/data', auth, async (req, res) => {
+  try {
+    const contacts = await Contact.find().select('-email -phone');
+    res.status(200).json(contacts);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // ✅ Get a single contact by ID
 router.get('/:id', auth, async (req, res) => {
   try {

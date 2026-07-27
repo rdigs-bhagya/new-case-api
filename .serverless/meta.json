@@ -1,10 +1,10 @@
 {
   "C:\\Users\\Admin\\Desktop\\new case api\\serverless.yml": {
-    "versionFramework": "4.38.0",
+    "versionFramework": "4.40.0",
     "servicePath": "C:\\Users\\Admin\\Desktop\\new case api\\serverless.yml",
     "serviceConfigFileName": "serverless.yml",
     "service": {
-      "service": "b2b-api",
+      "service": "case-api",
       "useDotenv": true,
       "provider": {
         "name": "aws",
@@ -30,7 +30,7 @@
             "ApiLogGroup": {
               "Type": "AWS::Logs::LogGroup",
               "Properties": {
-                "LogGroupName": "/aws/lambda/b2b-api-dev-api"
+                "LogGroupName": "/aws/lambda/case-api-dev-api"
               }
             },
             "IamRoleLambdaExecution": {
@@ -58,7 +58,7 @@
                       "Fn::Join": [
                         "-",
                         [
-                          "b2b-api",
+                          "case-api",
                           "dev",
                           "lambda"
                         ]
@@ -76,7 +76,7 @@
                           ],
                           "Resource": [
                             {
-                              "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/b2b-api-dev*:*"
+                              "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/case-api-dev*:*"
                             }
                           ]
                         },
@@ -87,7 +87,7 @@
                           ],
                           "Resource": [
                             {
-                              "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/b2b-api-dev*:*:*"
+                              "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/case-api-dev*:*:*"
                             }
                           ]
                         }
@@ -100,7 +100,7 @@
                   "Fn::Join": [
                     "-",
                     [
-                      "b2b-api",
+                      "case-api",
                       "dev",
                       {
                         "Ref": "AWS::Region"
@@ -116,11 +116,11 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
-                  "S3Key": "serverless/b2b-api/dev/1781873148546-2026-06-19T12:45:48.546Z/b2b-api.zip"
+                  "S3Key": "serverless/case-api/dev/1784907309592-2026-07-24T15:35:09.592Z/case-api.zip"
                 },
                 "Handler": "server.handler",
                 "Runtime": "nodejs18.x",
-                "FunctionName": "b2b-api-dev-api",
+                "FunctionName": "case-api-dev-api",
                 "MemorySize": 512,
                 "Timeout": 10,
                 "Environment": {
@@ -145,20 +145,20 @@
                 "ApiLogGroup"
               ]
             },
-            "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ": {
+            "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "ApiLambdaFunction"
                 },
-                "CodeSha256": "kcvO1rEEL1vQstGbd5c/ZLajZmmFvnXZRpvGoQ4HDVg="
+                "CodeSha256": "8GqaHYAh1sd92sg2U84hcVWe0C09V4cBXoaOz9dfUm8="
               }
             },
             "ApiGatewayRestApi": {
               "Type": "AWS::ApiGateway::RestApi",
               "Properties": {
-                "Name": "dev-b2b-api",
+                "Name": "dev-case-api",
                 "EndpointConfiguration": {
                   "Types": [
                     "EDGE"
@@ -370,7 +370,7 @@
                 "ApiLambdaPermissionApiGateway"
               ]
             },
-            "ApiGatewayDeployment1781873127278": {
+            "ApiGatewayDeployment1784907277330": {
               "Type": "AWS::ApiGateway::Deployment",
               "Properties": {
                 "RestApiId": {
@@ -427,16 +427,16 @@
             "ServerlessDeploymentBucketName": {
               "Value": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
               "Export": {
-                "Name": "sls-b2b-api-dev-ServerlessDeploymentBucketName"
+                "Name": "sls-case-api-dev-ServerlessDeploymentBucketName"
               }
             },
             "ApiLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ"
+                "Ref": "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM"
               },
               "Export": {
-                "Name": "sls-b2b-api-dev-ApiLambdaFunctionQualifiedArn"
+                "Name": "sls-case-api-dev-ApiLambdaFunctionQualifiedArn"
               }
             },
             "ServiceEndpoint": {
@@ -462,7 +462,7 @@
                 ]
               },
               "Export": {
-                "Name": "sls-b2b-api-dev-ServiceEndpoint"
+                "Name": "sls-case-api-dev-ServiceEndpoint"
               }
             }
           }
@@ -477,10 +477,10 @@
           "!undefined/**",
           "!.serverless/**"
         ],
-        "artifactsS3KeyDirname": "serverless/b2b-api/dev/code-artifacts",
+        "artifactsS3KeyDirname": "serverless/case-api/dev/code-artifacts",
         "deploymentBucket": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
-        "artifact": "C:\\Users\\Admin\\Desktop\\new case api\\.serverless\\b2b-api.zip",
-        "artifactDirectoryName": "serverless/b2b-api/dev/1781873148546-2026-06-19T12:45:48.546Z"
+        "artifact": "C:\\Users\\Admin\\Desktop\\new case api\\.serverless\\case-api.zip",
+        "artifactDirectoryName": "serverless/case-api/dev/1784907309592-2026-07-24T15:35:09.592Z"
       },
       "functions": {
         "api": {
@@ -535,13 +535,13 @@
               }
             }
           ],
-          "name": "b2b-api-dev-api",
+          "name": "case-api-dev-api",
           "package": {},
           "memory": 512,
           "timeout": 10,
           "runtime": "nodejs18.x",
           "vpc": {},
-          "versionLogicalId": "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ"
+          "versionLogicalId": "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM"
         }
       },
       "plugins": [
@@ -578,7 +578,7 @@
           "ApiLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/b2b-api-dev-api"
+              "LogGroupName": "/aws/lambda/case-api-dev-api"
             }
           },
           "IamRoleLambdaExecution": {
@@ -606,7 +606,7 @@
                     "Fn::Join": [
                       "-",
                       [
-                        "b2b-api",
+                        "case-api",
                         "dev",
                         "lambda"
                       ]
@@ -624,7 +624,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/b2b-api-dev*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/case-api-dev*:*"
                           }
                         ]
                       },
@@ -635,7 +635,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/b2b-api-dev*:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/case-api-dev*:*:*"
                           }
                         ]
                       }
@@ -648,7 +648,7 @@
                 "Fn::Join": [
                   "-",
                   [
-                    "b2b-api",
+                    "case-api",
                     "dev",
                     {
                       "Ref": "AWS::Region"
@@ -664,11 +664,11 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
-                "S3Key": "serverless/b2b-api/dev/1781873148546-2026-06-19T12:45:48.546Z/b2b-api.zip"
+                "S3Key": "serverless/case-api/dev/1784907309592-2026-07-24T15:35:09.592Z/case-api.zip"
               },
               "Handler": "server.handler",
               "Runtime": "nodejs18.x",
-              "FunctionName": "b2b-api-dev-api",
+              "FunctionName": "case-api-dev-api",
               "MemorySize": 512,
               "Timeout": 10,
               "Environment": {
@@ -693,20 +693,20 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ": {
+          "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "kcvO1rEEL1vQstGbd5c/ZLajZmmFvnXZRpvGoQ4HDVg="
+              "CodeSha256": "8GqaHYAh1sd92sg2U84hcVWe0C09V4cBXoaOz9dfUm8="
             }
           },
           "ApiGatewayRestApi": {
             "Type": "AWS::ApiGateway::RestApi",
             "Properties": {
-              "Name": "dev-b2b-api",
+              "Name": "dev-case-api",
               "EndpointConfiguration": {
                 "Types": [
                   "EDGE"
@@ -918,7 +918,7 @@
               "ApiLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1781873127278": {
+          "ApiGatewayDeployment1784907277330": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -975,16 +975,16 @@
           "ServerlessDeploymentBucketName": {
             "Value": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
             "Export": {
-              "Name": "sls-b2b-api-dev-ServerlessDeploymentBucketName"
+              "Name": "sls-case-api-dev-ServerlessDeploymentBucketName"
             }
           },
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ"
+              "Ref": "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM"
             },
             "Export": {
-              "Name": "sls-b2b-api-dev-ApiLambdaFunctionQualifiedArn"
+              "Name": "sls-case-api-dev-ApiLambdaFunctionQualifiedArn"
             }
           },
           "ServiceEndpoint": {
@@ -1010,7 +1010,7 @@
               ]
             },
             "Export": {
-              "Name": "sls-b2b-api-dev-ServiceEndpoint"
+              "Name": "sls-case-api-dev-ServiceEndpoint"
             }
           }
         }
@@ -1026,7 +1026,7 @@
       "serviceProvider": null,
       "instanceParameters": null
     },
-    "serviceRawFile": "service: b2b-api\nuseDotenv: true\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n  region: us-east-1 # Change to your preferred region\n  memorySize: 512\n  timeout: 10\n  environment:\n    MONGODB_USERNAME: ${env:MONGODB_USERNAME, ''}\n    MONGODB_PASSWORD: ${env:MONGODB_PASSWORD, ''}\n    MONGODB_CLUSTER: ${env:MONGODB_CLUSTER, ''}\n    MONGODB_DB: ${env:MONGODB_DB, ''}\n    ADMIN_EMAIL: ${env:ADMIN_EMAIL, ''}\n    ADMIN_PASSWORD: ${env:ADMIN_PASSWORD, ''}\n    JWT_SECRET: ${env:JWT_SECRET, ''}\n\npackage:\n  patterns:\n    - '!node_modules/aws-sdk/**'\n    - '!node_modules/serverless/**'\n    - '!node_modules/serverless-offline/**'\n    - '!undefined/**'\n    - '!.serverless/**'\n\nfunctions:\n  api:\n    handler: server.handler\n    events:\n      - http:\n          path: /\n          method: ANY\n          cors: true\n      - http:\n          path: /{proxy+}\n          method: ANY\n          cors: true\n\nplugins:\n  - serverless-offline\n\ncustom:\n  serverless-offline:\n    httpPort: 5000\n    noPrependStageInUrl: true\n",
+    "serviceRawFile": "service: case-api\nuseDotenv: true\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n  region: us-east-1 # Change to your preferred region\n  memorySize: 512\n  timeout: 10\n  environment:\n    MONGODB_USERNAME: ${env:MONGODB_USERNAME, ''}\n    MONGODB_PASSWORD: ${env:MONGODB_PASSWORD, ''}\n    MONGODB_CLUSTER: ${env:MONGODB_CLUSTER, ''}\n    MONGODB_DB: ${env:MONGODB_DB, ''}\n    ADMIN_EMAIL: ${env:ADMIN_EMAIL, ''}\n    ADMIN_PASSWORD: ${env:ADMIN_PASSWORD, ''}\n    JWT_SECRET: ${env:JWT_SECRET, ''}\n\npackage:\n  patterns:\n    - '!node_modules/aws-sdk/**'\n    - '!node_modules/serverless/**'\n    - '!node_modules/serverless-offline/**'\n    - '!undefined/**'\n    - '!.serverless/**'\n\nfunctions:\n  api:\n    handler: server.handler\n    events:\n      - http:\n          path: /\n          method: ANY\n          cors: true\n      - http:\n          path: /{proxy+}\n          method: ANY\n          cors: true\n\nplugins:\n  - serverless-offline\n\ncustom:\n  serverless-offline:\n    httpPort: 5000\n    noPrependStageInUrl: true\n",
     "command": [
       "deploy"
     ],
@@ -1036,28 +1036,28 @@
     "userId": "1cyHfRf61wL88CdL6k",
     "userName": "rdigs",
     "serviceProviderAwsAccountId": "140612709725",
-    "serviceProviderAwsCfStackName": "b2b-api-dev",
-    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:140612709725:stack/b2b-api-dev/30a1e810-6bd1-11f1-89f8-12f65714de41",
-    "serviceProviderAwsCfStackCreated": "2026-06-19T11:22:43.518Z",
+    "serviceProviderAwsCfStackName": "case-api-dev",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:140612709725:stack/case-api-dev/9a4bd360-8775-11f1-91c7-125c4e5dab11",
+    "serviceProviderAwsCfStackCreated": "2026-07-24T15:37:39.657Z",
     "serviceProviderAwsCfStackUpdated": null,
     "serviceProviderAwsCfStackStatus": "CREATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [
       {
         "OutputKey": "ApiLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:us-east-1:140612709725:function:b2b-api-dev-api:1",
+        "OutputValue": "arn:aws:lambda:us-east-1:140612709725:function:case-api-dev-api:1",
         "Description": "Current Lambda function version",
-        "ExportName": "sls-b2b-api-dev-ApiLambdaFunctionQualifiedArn"
+        "ExportName": "sls-case-api-dev-ApiLambdaFunctionQualifiedArn"
       },
       {
         "OutputKey": "ServiceEndpoint",
-        "OutputValue": "https://g8l8qu2ccf.execute-api.us-east-1.amazonaws.com/dev",
+        "OutputValue": "https://wcyf5iypbi.execute-api.us-east-1.amazonaws.com/dev",
         "Description": "URL of the service endpoint",
-        "ExportName": "sls-b2b-api-dev-ServiceEndpoint"
+        "ExportName": "sls-case-api-dev-ServiceEndpoint"
       },
       {
         "OutputKey": "ServerlessDeploymentBucketName",
         "OutputValue": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
-        "ExportName": "sls-b2b-api-dev-ServerlessDeploymentBucketName"
+        "ExportName": "sls-case-api-dev-ServerlessDeploymentBucketName"
       }
     ],
     "compiledCloudFormationTemplate": {
@@ -1067,7 +1067,7 @@
         "ApiLogGroup": {
           "Type": "AWS::Logs::LogGroup",
           "Properties": {
-            "LogGroupName": "/aws/lambda/b2b-api-dev-api"
+            "LogGroupName": "/aws/lambda/case-api-dev-api"
           }
         },
         "IamRoleLambdaExecution": {
@@ -1095,7 +1095,7 @@
                   "Fn::Join": [
                     "-",
                     [
-                      "b2b-api",
+                      "case-api",
                       "dev",
                       "lambda"
                     ]
@@ -1113,7 +1113,7 @@
                       ],
                       "Resource": [
                         {
-                          "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/b2b-api-dev*:*"
+                          "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/case-api-dev*:*"
                         }
                       ]
                     },
@@ -1124,7 +1124,7 @@
                       ],
                       "Resource": [
                         {
-                          "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/b2b-api-dev*:*:*"
+                          "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/case-api-dev*:*:*"
                         }
                       ]
                     }
@@ -1137,7 +1137,7 @@
               "Fn::Join": [
                 "-",
                 [
-                  "b2b-api",
+                  "case-api",
                   "dev",
                   {
                     "Ref": "AWS::Region"
@@ -1153,11 +1153,11 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
-              "S3Key": "serverless/b2b-api/dev/1781873148546-2026-06-19T12:45:48.546Z/b2b-api.zip"
+              "S3Key": "serverless/case-api/dev/1784907309592-2026-07-24T15:35:09.592Z/case-api.zip"
             },
             "Handler": "server.handler",
             "Runtime": "nodejs18.x",
-            "FunctionName": "b2b-api-dev-api",
+            "FunctionName": "case-api-dev-api",
             "MemorySize": 512,
             "Timeout": 10,
             "Environment": {
@@ -1182,20 +1182,20 @@
             "ApiLogGroup"
           ]
         },
-        "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ": {
+        "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "ApiLambdaFunction"
             },
-            "CodeSha256": "kcvO1rEEL1vQstGbd5c/ZLajZmmFvnXZRpvGoQ4HDVg="
+            "CodeSha256": "8GqaHYAh1sd92sg2U84hcVWe0C09V4cBXoaOz9dfUm8="
           }
         },
         "ApiGatewayRestApi": {
           "Type": "AWS::ApiGateway::RestApi",
           "Properties": {
-            "Name": "dev-b2b-api",
+            "Name": "dev-case-api",
             "EndpointConfiguration": {
               "Types": [
                 "EDGE"
@@ -1407,7 +1407,7 @@
             "ApiLambdaPermissionApiGateway"
           ]
         },
-        "ApiGatewayDeployment1781873127278": {
+        "ApiGatewayDeployment1784907277330": {
           "Type": "AWS::ApiGateway::Deployment",
           "Properties": {
             "RestApiId": {
@@ -1464,16 +1464,16 @@
         "ServerlessDeploymentBucketName": {
           "Value": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
           "Export": {
-            "Name": "sls-b2b-api-dev-ServerlessDeploymentBucketName"
+            "Name": "sls-case-api-dev-ServerlessDeploymentBucketName"
           }
         },
         "ApiLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ"
+            "Ref": "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM"
           },
           "Export": {
-            "Name": "sls-b2b-api-dev-ApiLambdaFunctionQualifiedArn"
+            "Name": "sls-case-api-dev-ApiLambdaFunctionQualifiedArn"
           }
         },
         "ServiceEndpoint": {
@@ -1499,7 +1499,7 @@
             ]
           },
           "Export": {
-            "Name": "sls-b2b-api-dev-ServiceEndpoint"
+            "Name": "sls-case-api-dev-ServiceEndpoint"
           }
         }
       }

@@ -1,4 +1,4 @@
-service: b2b-api
+service: case-api
 useDotenv: true
 
 provider:

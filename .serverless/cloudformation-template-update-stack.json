@@ -5,7 +5,7 @@
     "ApiLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/b2b-api-dev-api"
+        "LogGroupName": "/aws/lambda/case-api-dev-api"
       }
     },
     "IamRoleLambdaExecution": {
@@ -33,7 +33,7 @@
               "Fn::Join": [
                 "-",
                 [
-                  "b2b-api",
+                  "case-api",
                   "dev",
                   "lambda"
                 ]
@@ -51,7 +51,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/b2b-api-dev*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/case-api-dev*:*"
                     }
                   ]
                 },
@@ -62,7 +62,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/b2b-api-dev*:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/case-api-dev*:*:*"
                     }
                   ]
                 }
@@ -75,7 +75,7 @@
           "Fn::Join": [
             "-",
             [
-              "b2b-api",
+              "case-api",
               "dev",
               {
                 "Ref": "AWS::Region"
@@ -91,11 +91,11 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
-          "S3Key": "serverless/b2b-api/dev/1781873148546-2026-06-19T12:45:48.546Z/b2b-api.zip"
+          "S3Key": "serverless/case-api/dev/1784907309592-2026-07-24T15:35:09.592Z/case-api.zip"
         },
         "Handler": "server.handler",
         "Runtime": "nodejs18.x",
-        "FunctionName": "b2b-api-dev-api",
+        "FunctionName": "case-api-dev-api",
         "MemorySize": 512,
         "Timeout": 10,
         "Environment": {
@@ -120,20 +120,20 @@
         "ApiLogGroup"
       ]
     },
-    "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ": {
+    "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "kcvO1rEEL1vQstGbd5c/ZLajZmmFvnXZRpvGoQ4HDVg="
+        "CodeSha256": "8GqaHYAh1sd92sg2U84hcVWe0C09V4cBXoaOz9dfUm8="
       }
     },
     "ApiGatewayRestApi": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
-        "Name": "dev-b2b-api",
+        "Name": "dev-case-api",
         "EndpointConfiguration": {
           "Types": [
             "EDGE"
@@ -345,7 +345,7 @@
         "ApiLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1781873127278": {
+    "ApiGatewayDeployment1784907277330": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -402,16 +402,16 @@
     "ServerlessDeploymentBucketName": {
       "Value": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
       "Export": {
-        "Name": "sls-b2b-api-dev-ServerlessDeploymentBucketName"
+        "Name": "sls-case-api-dev-ServerlessDeploymentBucketName"
       }
     },
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersionpcShK2c6eRQE9I5VYGT7oO4R4WS1dmAoX4XAzawQ"
+        "Ref": "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM"
       },
       "Export": {
-        "Name": "sls-b2b-api-dev-ApiLambdaFunctionQualifiedArn"
+        "Name": "sls-case-api-dev-ApiLambdaFunctionQualifiedArn"
       }
     },
     "ServiceEndpoint": {
@@ -437,7 +437,7 @@
         ]
       },
       "Export": {
-        "Name": "sls-b2b-api-dev-ServiceEndpoint"
+        "Name": "sls-case-api-dev-ServiceEndpoint"
       }
     }
   }

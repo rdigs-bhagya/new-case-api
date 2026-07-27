@@ -61,6 +61,16 @@ router.get('/', auth, async (req, res) => {
   }
 });
 
+// ✅ GET Claims without email and phone
+router.get('/data', auth, async (req, res) => {
+  try {
+    const claims = await Claim.find().select('-email -phone');
+    res.status(200).json(claims);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // ✅ GET a single Claim by ID
 router.get('/:id', auth, async (req, res) => {
   try {
