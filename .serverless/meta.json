@@ -1,7 +1,7 @@
 {
-  "C:\\Users\\Admin\\Desktop\\new case api\\serverless.yml": {
-    "versionFramework": "4.40.0",
-    "servicePath": "C:\\Users\\Admin\\Desktop\\new case api\\serverless.yml",
+  "D:\\case-settlement\\new-case-api\\serverless.yml": {
+    "versionFramework": "4.42.0",
+    "servicePath": "D:\\case-settlement\\new-case-api\\serverless.yml",
     "serviceConfigFileName": "serverless.yml",
     "service": {
       "service": "case-api",
@@ -116,7 +116,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
-                  "S3Key": "serverless/case-api/dev/1784907309592-2026-07-24T15:35:09.592Z/case-api.zip"
+                  "S3Key": "serverless/case-api/dev/1790273635723-2026-09-24T18:13:55.723Z/case-api.zip"
                 },
                 "Handler": "server.handler",
                 "Runtime": "nodejs18.x",
@@ -145,14 +145,14 @@
                 "ApiLogGroup"
               ]
             },
-            "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM": {
+            "ApiLambdaVersionreVpCt4k3BPQdARqKUgcoF47aTOYhrWjO0olaEG7Y": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "ApiLambdaFunction"
                 },
-                "CodeSha256": "8GqaHYAh1sd92sg2U84hcVWe0C09V4cBXoaOz9dfUm8="
+                "CodeSha256": "oa1WvMibUK0yNbIOozrXoRXMrfJb3GJITfVvX9NHtJo="
               }
             },
             "ApiGatewayRestApi": {
@@ -370,7 +370,7 @@
                 "ApiLambdaPermissionApiGateway"
               ]
             },
-            "ApiGatewayDeployment1784907277330": {
+            "ApiGatewayDeployment1790273615367": {
               "Type": "AWS::ApiGateway::Deployment",
               "Properties": {
                 "RestApiId": {
@@ -433,7 +433,7 @@
             "ApiLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM"
+                "Ref": "ApiLambdaVersionreVpCt4k3BPQdARqKUgcoF47aTOYhrWjO0olaEG7Y"
               },
               "Export": {
                 "Name": "sls-case-api-dev-ApiLambdaFunctionQualifiedArn"
@@ -479,8 +479,8 @@
         ],
         "artifactsS3KeyDirname": "serverless/case-api/dev/code-artifacts",
         "deploymentBucket": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
-        "artifact": "C:\\Users\\Admin\\Desktop\\new case api\\.serverless\\case-api.zip",
-        "artifactDirectoryName": "serverless/case-api/dev/1784907309592-2026-07-24T15:35:09.592Z"
+        "artifact": "D:\\case-settlement\\new-case-api\\.serverless\\case-api.zip",
+        "artifactDirectoryName": "serverless/case-api/dev/1790273635723-2026-09-24T18:13:55.723Z"
       },
       "functions": {
         "api": {
@@ -541,7 +541,7 @@
           "timeout": 10,
           "runtime": "nodejs18.x",
           "vpc": {},
-          "versionLogicalId": "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM"
+          "versionLogicalId": "ApiLambdaVersionreVpCt4k3BPQdARqKUgcoF47aTOYhrWjO0olaEG7Y"
         }
       },
       "plugins": [
@@ -664,7 +664,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
-                "S3Key": "serverless/case-api/dev/1784907309592-2026-07-24T15:35:09.592Z/case-api.zip"
+                "S3Key": "serverless/case-api/dev/1790273635723-2026-09-24T18:13:55.723Z/case-api.zip"
               },
               "Handler": "server.handler",
               "Runtime": "nodejs18.x",
@@ -693,14 +693,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM": {
+          "ApiLambdaVersionreVpCt4k3BPQdARqKUgcoF47aTOYhrWjO0olaEG7Y": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "8GqaHYAh1sd92sg2U84hcVWe0C09V4cBXoaOz9dfUm8="
+              "CodeSha256": "oa1WvMibUK0yNbIOozrXoRXMrfJb3GJITfVvX9NHtJo="
             }
           },
           "ApiGatewayRestApi": {
@@ -918,7 +918,7 @@
               "ApiLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1784907277330": {
+          "ApiGatewayDeployment1790273615367": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -981,7 +981,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM"
+              "Ref": "ApiLambdaVersionreVpCt4k3BPQdARqKUgcoF47aTOYhrWjO0olaEG7Y"
             },
             "Export": {
               "Name": "sls-case-api-dev-ApiLambdaFunctionQualifiedArn"
@@ -1026,7 +1026,7 @@
       "serviceProvider": null,
       "instanceParameters": null
     },
-    "serviceRawFile": "service: case-api\nuseDotenv: true\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n  region: us-east-1 # Change to your preferred region\n  memorySize: 512\n  timeout: 10\n  environment:\n    MONGODB_USERNAME: ${env:MONGODB_USERNAME, ''}\n    MONGODB_PASSWORD: ${env:MONGODB_PASSWORD, ''}\n    MONGODB_CLUSTER: ${env:MONGODB_CLUSTER, ''}\n    MONGODB_DB: ${env:MONGODB_DB, ''}\n    ADMIN_EMAIL: ${env:ADMIN_EMAIL, ''}\n    ADMIN_PASSWORD: ${env:ADMIN_PASSWORD, ''}\n    JWT_SECRET: ${env:JWT_SECRET, ''}\n\npackage:\n  patterns:\n    - '!node_modules/aws-sdk/**'\n    - '!node_modules/serverless/**'\n    - '!node_modules/serverless-offline/**'\n    - '!undefined/**'\n    - '!.serverless/**'\n\nfunctions:\n  api:\n    handler: server.handler\n    events:\n      - http:\n          path: /\n          method: ANY\n          cors: true\n      - http:\n          path: /{proxy+}\n          method: ANY\n          cors: true\n\nplugins:\n  - serverless-offline\n\ncustom:\n  serverless-offline:\n    httpPort: 5000\n    noPrependStageInUrl: true\n",
+    "serviceRawFile": "service: case-api\r\nuseDotenv: true\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs18.x\r\n  region: us-east-1 # Change to your preferred region\r\n  memorySize: 512\r\n  timeout: 10\r\n  environment:\r\n    MONGODB_USERNAME: ${env:MONGODB_USERNAME, ''}\r\n    MONGODB_PASSWORD: ${env:MONGODB_PASSWORD, ''}\r\n    MONGODB_CLUSTER: ${env:MONGODB_CLUSTER, ''}\r\n    MONGODB_DB: ${env:MONGODB_DB, ''}\r\n    ADMIN_EMAIL: ${env:ADMIN_EMAIL, ''}\r\n    ADMIN_PASSWORD: ${env:ADMIN_PASSWORD, ''}\r\n    JWT_SECRET: ${env:JWT_SECRET, ''}\r\n\r\npackage:\r\n  patterns:\r\n    - '!node_modules/aws-sdk/**'\r\n    - '!node_modules/serverless/**'\r\n    - '!node_modules/serverless-offline/**'\r\n    - '!undefined/**'\r\n    - '!.serverless/**'\r\n\r\nfunctions:\r\n  api:\r\n    handler: server.handler\r\n    events:\r\n      - http:\r\n          path: /\r\n          method: ANY\r\n          cors: true\r\n      - http:\r\n          path: /{proxy+}\r\n          method: ANY\r\n          cors: true\r\n\r\nplugins:\r\n  - serverless-offline\r\n\r\ncustom:\r\n  serverless-offline:\r\n    httpPort: 5000\r\n    noPrependStageInUrl: true\r\n",
     "command": [
       "deploy"
     ],
@@ -1039,12 +1039,12 @@
     "serviceProviderAwsCfStackName": "case-api-dev",
     "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:140612709725:stack/case-api-dev/9a4bd360-8775-11f1-91c7-125c4e5dab11",
     "serviceProviderAwsCfStackCreated": "2026-07-24T15:37:39.657Z",
-    "serviceProviderAwsCfStackUpdated": null,
-    "serviceProviderAwsCfStackStatus": "CREATE_COMPLETE",
+    "serviceProviderAwsCfStackUpdated": "2026-09-24T13:28:56.723Z",
+    "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [
       {
         "OutputKey": "ApiLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:us-east-1:140612709725:function:case-api-dev-api:1",
+        "OutputValue": "arn:aws:lambda:us-east-1:140612709725:function:case-api-dev-api:3",
         "Description": "Current Lambda function version",
         "ExportName": "sls-case-api-dev-ApiLambdaFunctionQualifiedArn"
       },
@@ -1153,7 +1153,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-us-east-1-e74a2b6c-1b16",
-              "S3Key": "serverless/case-api/dev/1784907309592-2026-07-24T15:35:09.592Z/case-api.zip"
+              "S3Key": "serverless/case-api/dev/1790273635723-2026-09-24T18:13:55.723Z/case-api.zip"
             },
             "Handler": "server.handler",
             "Runtime": "nodejs18.x",
@@ -1182,14 +1182,14 @@
             "ApiLogGroup"
           ]
         },
-        "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM": {
+        "ApiLambdaVersionreVpCt4k3BPQdARqKUgcoF47aTOYhrWjO0olaEG7Y": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "ApiLambdaFunction"
             },
-            "CodeSha256": "8GqaHYAh1sd92sg2U84hcVWe0C09V4cBXoaOz9dfUm8="
+            "CodeSha256": "oa1WvMibUK0yNbIOozrXoRXMrfJb3GJITfVvX9NHtJo="
           }
         },
         "ApiGatewayRestApi": {
@@ -1407,7 +1407,7 @@
             "ApiLambdaPermissionApiGateway"
           ]
         },
-        "ApiGatewayDeployment1784907277330": {
+        "ApiGatewayDeployment1790273615367": {
           "Type": "AWS::ApiGateway::Deployment",
           "Properties": {
             "RestApiId": {
@@ -1470,7 +1470,7 @@
         "ApiLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "ApiLambdaVersionIQ4NneS5BzadjC40PE7j3J7BLYJuV02mVUebCdcyM"
+            "Ref": "ApiLambdaVersionreVpCt4k3BPQdARqKUgcoF47aTOYhrWjO0olaEG7Y"
           },
           "Export": {
             "Name": "sls-case-api-dev-ApiLambdaFunctionQualifiedArn"
